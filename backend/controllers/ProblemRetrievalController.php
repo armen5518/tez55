@@ -69,8 +69,15 @@ class ProblemRetrievalController extends Controller
 
         $model = new ProblemRetrieval();
         if (empty($model::findOne(['problem_id' => Yii::$app->request->get('id')]))){
-
-            if ($model->load(Yii::$app->request->post()) && $model->save()) {
+            $post = Yii::$app->request->post();
+            if ($post) {
+                if(!empty($post['ProblemLog'])){
+                    $model_log =  new ProblemLog();
+                    $model_log->load($post['ProblemLog']);
+                    $model_log->save();
+                }
+                print_r(Yii::$app->request->post());
+                exit;
 //                return $this->redirect(['view', 'id' => $model->id]);
             } else {
                 $searchModel = new ProblemLogSearch();

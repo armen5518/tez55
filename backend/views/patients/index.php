@@ -36,6 +36,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'ealth_tatus',
 //            'date',
             'description',
+            'status',
 
             // 'p_last_name',
             // 'date_birth',

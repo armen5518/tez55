@@ -44,6 +44,7 @@ use yii\helpers\Html;
         ]); ?>
     </div>
     <div class="col-md-2">
+        <?= $form->field($model, 'status')->textInput(['maxlength' => true]) ?>
     </div>
     <div class="col-md-8">
         <?= $form->field($model, 'description')->textarea(['maxlength' => true]) ?>

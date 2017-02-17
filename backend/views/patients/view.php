@@ -17,6 +17,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1>Patient Medical History</h1>
 
     <p>
+        
         <?= Html::a(Yii::t('app', 'Update'), ['update', 'id' => $model->patients_id], ['class' => 'btn btn-primary']) ?>
         <?= Html::a(Yii::t('app', 'Delete'), ['delete', 'id' => $model->patients_id], [
             'class' => 'btn btn-danger',
@@ -25,6 +26,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 'method' => 'post',
             ],
         ]) ?>
+        <a href="http://169.50.20.5/doc/backend/web/risk-factors">Risk Factors</a>
     </p>
 
     <?= DetailView::widget([
